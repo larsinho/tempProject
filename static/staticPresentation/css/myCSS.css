@@ -1,0 +1,6 @@
+.myBoxClass {
+    position: absolute;
+    width: 70%;
+    top: 10px;
+    background-color: rgba(50, 50, 50, .9);
+}

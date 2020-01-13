@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Policy Uncertainty</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Lars Sendstad">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="{{ url_for('static', filename='reveal.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='theme/black.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='mycss.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='pdf.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='paper.css') }}" rel="stylesheet">
+
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link href="{{ url_for('static', filename='lib/css/zenburn.css') }}" rel="stylesheet">
+
+
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides" data-background-transition="slide">
+            <section>
+                <h3>Sequential Investment in Emerging Technologies under Policy Uncertainty</h3>
+                <p>
+                    <small>By <a href="www.sendstad.com">Lars H. Sendstad</a> and <a href="http://michail-chronopoulos.com/">Michail Chronopoulos</a></small>
+                </p>
+                <p>
+                    <small><a href="http://www.sendstad.com/PresentationInvestExL2nd">www.sendstad.com/presentationInvestExL2nd</a> </small></p>
+            </section>
+
+            <section>
+                <h2>EU Guidance for Subsidies</h2>
+                <ul>
+                    <li class="fragment">Financial support for renewables should be limited and aim to make renewables competitive</li>
+                    <li class="fragment">Support schemes should be flexible and respond to falling production costs</li>
+                    <li class="fragment"> Unannounced or retroactive changes to support schemes should be avoided</li>
+                </ul>
+                <!-- https://ec.europa.eu/energy/en/topics/renewable-energy/support-schemes -->
+            </section>
+            <section>
+                <h2>Objectives</h2>
+                <ul>
+                    <li class="fragment">How does policy uncertainty impact an investment decision?</li>
+                    <li class="fragment">How does technological uncertainty interact with policy uncertainty?</li>
+                    <li class="fragment">At what price should a firm adopt new versions of a technology under price, policy, and technological uncertainty?</li>
+                </ul>
+                <!-- https://ec.europa.eu/energy/en/topics/renewable-energy/support-schemes -->
+            </section>
+
+            <section>
+                <section data-background="static/img/imgPresentation1/world.jpg">
+                    <h3>Policy Uncertainty</h3>
+                    <p>
+
+                    </p>
+                </section>
+                <section data-background="static/img/imgPresentation1/norway.jpg" data-background-transition="zoom ">
+                    <div class="myBoxClass ">
+                        <h3>Norway</h3>
+                        <ul style="font-size: 90%; ">
+                            <li>Data centers were considered a source of high skilled jobs </li>
+                            <li>Fee exemption abruptly retracted </li>
+                            <li>Owner of Kryptovault:</li>
+                            <blockquote></blockquote> "One of our advantages were predictability and a stable economic climate. ... We have told our Asian investors that there will not be any abrupt changes. Then this happens. "
+                            </blockquote>
+                        </ul>
+                    </div>
+                </section>
+                <section data-background="static/img/imgPresentation1/spain.jpg" data-background-transition="zoom ">
+                    <div class="myBoxClass ">
+                        <h3>Spain</h3>
+                        <ul style="text-align: left; ">
+                            <li>Promises of 10% annual return on Solar projects </li>
+                            <!-- %The cost del sol -->
+                            <li>Several cuts resulting in 40% subsidy reduction according to one firm</li>
+                        </ul>
+                    </div>
+                </section>
+                <section data-background="static/img/imgPresentation1/easternEurope.jpg" data-background-transition="zoom ">
+                    <div class="myBoxClass">
+                        <h3>Eastern Europe</h3>
+                        <ul style="text-align: left; font-size: 90% ">
+                            <li>Eastern Europe has had a fast-growing PV market</li>
+                            <li>Several of these countries reached their 2020 EU targets for RE ahead of time</li>
+                            <li>End users and energy companies have footed the bill</li>
+                            <li>Czech policymakers have restricted feed-in tariffs and started levying a windfall tax</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section data-background="static/img/imgPresentation1/windPark.jpg">
+                    <div class="myBoxClass">
+                        <h3>Technological Uncertainty</h3>
+                        <ul>
+                            <li>Another important consideration for investors</li>
+                            <li>Fast pace of innovation</li>
+                            <li>Difficult to sustain a competitive advantage</li>
+                        </ul>
+                    </div>
+                </section>
+                <section data-background="static/img/imgPresentation1/windPark.jpg">
+                    <div class="myBoxClass">
+                        <h3>Vesta</h3>
+                        <ul style="text-align: left;  font-size: 90%; ">
+                            <li>Failing wind turbine business in 2012</li>
+                            <li>Restructuring and cooperation</li>
+                            <li>Entered into off-shore wind turbines</li>
+                            <li>Regained position as world leader</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section style="width: 100%; left: 0; margin-left: 0; ">
+                <h2>Objectives Revisited</h2>
+                <ul>
+                    <li>Based on the examples from Spain and Eastern Europe (Norway?), political stability seems to be important </li>
+                    <li>Technological uncertainty presents opportunities</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>Related work: Policy Uncertainty</h2>
+                    <ul>
+                        <li>Boomsma & Linnerud (2015)</li>
+                        <ul>
+                            <li>Optimal investment when the current support scheme will be terminated or revised
+                            </li>
+                            <li>The prospect of subsidy retraction increases the rate of investment if it is applied to new projects, while it slows down investment if it has a retroactive effect</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Related work: Policy Uncertainty</h2>
+                    <ul>
+                        <li>Adkins & Paxson (2015)</li>
+                        <ul>
+                            <li>Considers a fixed percentage premium and several policy interventions</li>
+                            <li>Price, quantity, and policy uncertainty</li>
+                            <li>Their results indicate that the prospect of a permanent subsidy retraction (provision) facilitates (postpones) investment </li>
+                        </ul>
+                        <li class="fragment">Yet they do not consider technological uncertainty</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Related work: Technological Uncertainty</h3>
+                    <ul>
+                        <li>Grenadier and Weiss (1997)</li>
+                        <ul>
+                            <li>Sequential investment</li>
+                            <li>How does the innovation rate impact adoption strategy? </li>
+                            <li>Leapfrog, laggard or compulsive?</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Related work: Technological Uncertainty</h3>
+                    <ul>
+                        <li>Chronopoulos and Siddiqui (2015)</li>
+                        <ul>
+                            <li>Sequential investment</li>
+                            <li>Technological uncertainty can lead to early adoption</li>
+                        </ul>
+                        <li class="fragment ">Yet they do not consider policy uncertainty</li>
+                    </ul>
+                </section>
+            </section>
+            <section data-background="static/img/imgPresentation1/math.jpg">
+                <div class="myBoxClass">
+                    <h3>Model</h3>
+                    <ul style="text-align: left;  font-size: 90%; ">
+                        <li>Assumptions</li>
+                        <li>Benchmark model with technological uncertainty</li>
+                        <li>Model with political uncertainty</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>Assumptions: Policy Uncertainty</h3>
+                <ul style="font-size: 90%; ">
+                    <li> We consider both the sudden provision and retraction of a subsidy</li>
+                    <li> The time between each policy intervention is exponentially distributed</li>
+                    <li> Implies that there is an equal probability of a policy intervention conditional on the current time</li>
+                    <div style="text-align: center;">\( \lambda_p dt\) </div>
+                    <li>Example, \( \lambda_p = 0.2\) implies that the expected time until policy intervention is \(\frac{1}{0.2}=5 \) years </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Assumptions: Technological Uncertainty</h3>
+                <ul>
+                    <li>Technological innovations might arrive at any time</li>
+                    <li>The new technology covers greater demand \( (D_{2}\geq D_1) \), yet at a higher cost \( (I_{2}\geq I_1) \) </li>
+                    <li>Assumed to be uncorrelated with policy uncertainty and the price process</li>
+                    <div style="text-align: center;">\( \lambda_\tau dt\) </div>
+                </ul>
+                <div><img src="static/img/imgPresentation1/stateTransition.png " width="100% " /></div>
+            </section>
+            <section>
+                <h3>Assumptions: Price Uncertainty</h3>
+                <ul style="font-size: 90%; ">
+                    <li> The output price, \(E_t\), follows a geometric Brownian motion (GBM)</li>
+                    <div style="text-align: center;">\( dE_t = \mu E_t dt + \sigma E_t dZ_t, \quad E_0 \equiv E >0 \) </div>
+                    <ul>
+                        <li> \(\mu\): the annual growth rate </li>
+                        <li> \(\sigma\): the annual volatility </li>
+                        <li> \(dZ_t\): the increment of the standard Brownian motion </li>
+                    </ul>
+                    <li> By setting \(\sigma = 0\) we get the solution \(e^{\mu t } \), i.e. continously compunded interest rate </li>
+                    <li> Electricity prices are often said to be mean reverting, but GBM with low growth rate is quite accurate for a long horizon (inflation? )</li>
+                </ul>
+            </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Benchmark Model: Operating second Technology</h3>
+                    <ul>
+                        <li>We use dynamic programming to solve the investment problem (start at the end)</li>
+                        <li>The expected value of the revenues from operating the second technology</li>
+                        <div style="text-align: center;"> \( \Phi_{2,a}^{0,0}(E)=\frac{D_2E\left(1+ay\right)}{\rho-\mu}\)</div>
+                        <li>The subsidy is fixed percentage on top of the output price</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Benchmark Model: Before upgrade</h3>
+                    <ul style="font-size: 70%; ">
+                        <li>In state (1,2) the firm receives the cash flows from operating the first technology, and has an embedded option to adopt the second one</li>
+                        <div style='text-align: center;'>\( \begin{align*} F_{2,a}^{0,0}(E)= & D_1E\left(1+ya\right)dt \\ & +\left(1-\rho dt\right)\mathbb{E}_E \left[F_{2,a}^{0,0}(E+dE)\right] \end{align*} \) </div>
+                        <li> By expanding the right-hand side using Itô's lemma and solving the resulting ordinary differential equation, we obtain
+                        </li>
+                        <div style='text-align: center;'>\( \begin{eqnarray*}\label{eq44.8} F_{2,a}^{0,0}(E)= \begin{cases} \frac{D_1 E(1+ay)}{\rho-\mu}+A_{2,a}^{0,0}E^{\beta_1}&, E
+                            <\varepsilon_{2,a}^{0,0} \\ \Phi_{2,a}^{0,0}(E)-I_2 &, E\geq\varepsilon_{2,a}^{0,0} \\ \end{cases} \end{eqnarray*} \) </div>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Benchmark Model: Technological Uncertainty</h3>
+                    <ul style="font-size: 70%; ">
+                        <li>In state (1), the decisionmaker is operating the first technology version, and holds an option to invest in the second one that has yet to arrive</li>
+                        <div style='text-align: center;'>\( \begin{align*} \Phi_{1,a}^{0,0}(E) = D_1E\left(1+ay\right)dt +& \left(1-\rho dt\right)\bigg\{\lambda_\tau dt \mathbb{E}_E \left[F_{2,a}^{0,0}(E+dE)\right] \nonumber \\ & \ \ + \left(1- \lambda_\tau dt \right)\mathbb{E}_E \left[\Phi_{1,a}^{0,0}(E+dE)\right]
+                            \bigg\} \end{align*} \) </div>
+                        <li>The expression of the value function in state (1)
+                        </li>
+                        <div style='text-align: center;'>\( \begin{eqnarray*}\label{eq44.11} \Phi_{1,a}^{0,0}(E)= \begin{cases} \frac{D_1 E\left(1+ay\right)}{\rho-\mu}+A_{2,a}^{0,0}E^{\beta_1}+A_{1,a}^{0,0}E^{\delta_1} &, \ E
+                            < \varepsilon_{2,a}^{0,0} \\ \frac{\left(\lambda_{\tau}D_2+\left(\rho-\mu\right)D_1\right)E\left(1+ay\right)}{\left(\rho-\mu\right)\left(\rho-\mu +\lambda_\tau \right)}-\frac{\lambda_{\tau}I_2}{\rho+\lambda_\tau} +B_{1,a}^{0,0}E^{\delta_2} &, \ E \geq
+                                \varepsilon_{2,a}^{0,0} \end{cases} \end{eqnarray*} \) </div>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Benchmark Model: First Investment</h3>
+                    <ul style="font-size: 70%;">
+                        <li>Finally, the option to invest in the first technology version with an embedded option to invest in the second one is
+                        </li>
+                        <div style='text-align: center;'>\( \begin{align*} F_{1,a}^{0,0}(E)=(1-\rho dt)\mathbb{E}_E [F_{1,a}^{0,0}(E+dE)] \end{align*} \) </div>
+                        <li>By expanding the right-hand side using Itô's lemma and solving the resulting ordinary differential equation, we obtain
+                        </li>
+                        <div style='text-align: center;'>\( \begin{eqnarray*}\label{eq44.12} F_{1,a}^{0,0}(E)= \begin{cases} C_{1,a}^{0,0}E^{\beta_1} &, E
+                            <\varepsilon_{1,a}^{0,0} \\ \Phi_{1,a}^{0,0}(E) -I_1 &, E\geq \varepsilon_{1,a}^{0,0} \end{cases} \end{eqnarray*} \) </div>
+                    </ul>
+                </section>
+                <section>
+                    <h3>What is the Benchmark Model?</h3>
+                    <ul>
+                        <li>Model with sequential investment</li>
+                        <li>Random arrival of a technology</li>
+                        <li>More representative for industries without heavy government interventions</li>
+                        <li>No policy uncertainty</li>
+                    </ul>
+                </section>
+                <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                    <h2> Interesting :)</h2>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Permanent Subsidy Retraction</h3>
+                    <ul style="font-size: 60%;">
+                        <li>The expected revenue from operating the second technology version under a retractable subsidy is</li>
+                        <div style='text-align: center;'>\( \begin{eqnarray*} \Phi_{2,1}^{0,1}(E) = \frac{D_2E}{\rho-\mu} + \frac{D_2Ey}{\rho-\mu+\lambda_p} \end{eqnarray*} \) </div>
+                        <li>In state (1,2) the decisionmaker is operating the first technology version and holds an option to invest in the second one</li>
+                        <div style='text-align: center;'>\( \begin{align*} F_{2,1}^{0,1}(E)= & D_1E(1+y)dt +\left(1-\rho dt\right)\biggl\{ \\ & \lambda_p dt \mathbb{E}_E \left[F_{2,0}^{0,0}(E+dE)\right] +\left(1- \lambda_p dt \right)\mathbb{E}_E \left[F_{2,1}^{0,1}(E+dE)\right] \biggr\}
+                            \end{align*} \) </div>
+                        <li> Using Itô's lemma we obtain the expression of the value function in state (1,2)</li>
+                        <div style='text-align: center;'>\( \begin{eqnarray*}\label{eq45.5} F_{2,1}^{0,1}(E)= \begin{cases} \frac{ D_1 E}{\rho-\mu}+\frac{D_1Ey}{\rho-\mu+\lambda_{p}} +A_{2,0}^{0,0}E^{\beta_1}+A_{2,1}^{0,1}E^{\eta_1}&, E
+                            <\varepsilon_{2,1}^{0,1} \\ \Phi_{2,1}^{0,1}(E) -I_2 &, E\geq\varepsilon_{2,1}^{0,1} \\ \end{cases} \end{eqnarray*} \) </div>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Permanent Subsidy Retraction: Technological uncertainty</h4>
+                    <ul style="font-size: 90%;">
+                        <li>We can combine the probability of a policy internvention with technological uncertainty as below</li>
+                        <div style='font-size: 55%; text-align: center;'>\( \begin{align*} \Phi_{1,1}^{0,1}(E)= & D_1E(1+y) dt+ \left(1-\rho dt\right)\Bigg\{ \\ & {\lambda_p dt} \bigg( {\lambda_\tau dt} \mathbb{E}_E \left[F_{2,0}^{0,0}(E+dE)\right] + {\left(1- \lambda_\tau dt \right)} \mathbb{E}_E\left[\Phi_{1,0}^{0,0}(E+dE)\right]\bigg)
+                            \\ & + {\left(1-\lambda_pdt\right)}\bigg( {\lambda_\tau dt} \mathbb{E}_E \left[F_{2,1}^{0,1}(E+dE)\right] + {\left(1- \lambda_\tau dt \right)}\mathbb{E}_E \left[\Phi_{1,1}^{0,1}(E+dE)\right]\bigg)\Bigg\} \nonumber \end{align*}
+                            \) </div>
+                        <li>Next, by using similar steps as for the Benchmark model we can find the value function and investment threshold in the first technology</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>What is this model?</h3>
+                    <ul>
+                        <li>Model with sequential investment</li>
+                        <li>Random arrival of technologies</li>
+                        <li>Combined with a probability of a policy retraction</li>
+                        <ul style='font-size: 80%;'>
+                            <li>We can now investigate how policy uncertainty impacts the investment decision </li>
+                            <li>How technological uncertainty interacts with policy uncertainty</li>
+                            <li>The optimal adoption strategy under price, policy, and technological uncertainty</li>
+                        </ul>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Results</h2>
+                    <a href="http://www.sendstad.com/research"> Results policy retraction</a>
+                </section>
+                <section>
+                    <h4>Results: Second Investment, Retraction</h4>
+                    <div class="myContainer">
+                        <div class="myCol">
+                            <ul style='font-size: 80%;'>
+                                <li>The investment threshold in the second technology</li>
+                                <li>The prospect of a sudden subsidy retraction decreases the investment incentive</li>
+                                <li>Price uncertainty increases the value of waiting</li>
+                            </ul>
+                        </div>
+                        <div class="myCol">
+                            <div><img src="static/img/imgPresentation1/F12_retract.PNG" width="100% " /></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Results: First Investment, Retraction</h4>
+                    <div class="myContainer">
+                        <div class="myCol">
+                            <ul style='font-size: 80%;'>
+                                <li>The investment threshold in the first technology</li>
+                                <li>Technological uncertainty mitigates the impact of policy uncertainty</li>
+                            </ul>
+                        </div>
+                        <div class="myCol">
+                            <div><img src="static/img/imgPresentation1/F01_retract.PNG" width="100% " /></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Results: Second Investment, Provision</h4>
+                    <div class="myContainer">
+                        <div class="myCol">
+                            <ul style='font-size: 80%;'>
+                                <li>If we carry out the same analysis assuming that a subsidy might be suddenly provided</li>
+                                <li>The investment threshold in the second technology</li>
+                                <li>The prospect of a sudden subsidy retraction decreases the investment incentive</li>
+                                <li>Price uncertainty increases the value of waiting</li>
+                            </ul>
+                        </div>
+                        <div class="myCol">
+                            <div><img src="static/img/imgPresentation1/F12_provision.PNG" width="100% " /></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Results: First Investment, Provision </h4>
+                    <div class="myContainer">
+                        <div class="myCol">
+                            <ul style='font-size: 80%;'>
+                                <li> The option to upgrade to a more efficient technology further induces investment</li>
+                            </ul>
+                        </div>
+                        <div class="myCol">
+                            <div><img src="static/img/imgPresentation1/F01_provision.PNG" width="100% " /></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Results: Provision of a retractable subsidy </h4>
+                    <ul style='font-size: 80%;'>
+                        <li> An increase in \( \lambda_p \) implies that the extra value due the provision of the subsidy is reduced due to the likelihood of a subsequent subsidy retraction </li>
+                    </ul>
+                    <div class="myContainer">
+                        <div class="myCol" style="background-color: rgba(255, 255, 255);">
+                            <div><img style="box-shadow: none !important;" src="static/img/imgPresentation1/F12_provRetract.PNG" width="80% " /></div>
+                        </div>
+                        <div class="myCol" style="background-color: rgba(255, 255, 255);">
+                            <div><img style="box-shadow: none !important;" src="static/img/imgPresentation1/F01_provRetract.PNG" width="80% " /></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>Results: Infinite Provisions and Retractions </h4>
+                    <ul style='font-size: 80%;'>
+                        <li> Infinite provisions and retractions mitigate the impact observed in the case of permanent provision/retraction. </li>
+                    </ul>
+                    <div><img src="static/img/imgPresentation1/inf.PNG" width="100% " /></div>
+                </section>
+
+            </section>
+            <section>
+                <section data-background="static/img/imgPresentation1/windOffshore.jpg">
+                    <div class="myBoxClass ">
+                        <h2>Conclusion</h2>
+                        <ul style='font-size: 70%;'>
+                            <li class="fragment">The possibility of a sudden subsidy retraction decreases the incentive to invest </li>
+                            <ul>
+                                <li class="fragment">Decreased investment activity in Eastern Europe is thus expected as we have observed in Spain </li>
+                            </ul>
+                            <li class="fragment">Sudden provision of a subsidy hastens investment because the investment opportunity is more valuable</li>
+                            <li class="fragment">The possibility of sequential investment may mitigate or amplify the impact of policy uncertainty</li>
+                            <ul>
+                                <li class="fragment">Investing at a lower price in the current technology may position the firm for new technologies
+                                </li>
+                                <li class="fragment">Can be more important than a policy retraction</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+
+            <section>
+                <h2> Thank you!</h2>
+            </section>
+
+            </div>
+
+            </div>
+
+            <script src="{{ url_for( 'static', filename='reveal.js' ) }} "></script>
+            <script src="{{ url_for( 'static', filename='head.min.js' ) }} "></script>
+
+            <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" }, extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"] } });
+            </script>
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            </script>
+
+            <script>
+                // More info https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    history: true,
+                    center: true,
+
+                    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                    // More info https://github.com/hakimel/reveal.js#dependencies
+                    dependencies: [{
+                        src: 'lib/js/classList.js',
+                        condition: function() {
+                            return !document.body.classList;
+                        }
+                    }, {
+                        src: 'plugin/markdown/marked.js',
+                        condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    }, {
+                        src: 'plugin/markdown/markdown.js',
+                        condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    }, {
+                        src: href = "{{ url_for('templates', filename='plugin/highlight/highlight.js') }}",
+                        async: true,
+                        callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }, {
+                        src: 'plugin/search/search.js',
+                        async: true
+                    }, {
+                        src: 'plugin/zoom-js/zoom.js',
+                        async: true
+                    }, {
+                        src: 'plugin/notes/notes.js',
+                        async: true
+                    }]
+                });
+            </script>
+
+</body>
+
+</html>

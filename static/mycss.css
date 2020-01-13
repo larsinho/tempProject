@@ -1,0 +1,73 @@
+/* -------------------------
+Active lists
+------------------------- */
+
+
+/*.active a{
+      color: white !important;
+  }*/
+
+
+/* -------------------------
+        Slider to change values
+------------------------- */
+
+.sliders {
+    display: inline-block;
+}
+
+.interactive {
+    margin-left: 2cm;
+}
+
+.valueBox {
+    margin: auto;
+    border-radius: 7px;
+    border: 1px solid #000000;
+    padding: 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    line-height: 30px;
+    height: 30px;
+    width: 50px;
+}
+
+.ui-slider-handle,
+.ui-state-hover,
+.ui-state-default {
+    height: 29px !important;
+    width: 20px;
+    background: #00bfff !important;
+    border-radius: 0;
+    top: 0 !important;
+    border: 0 !important;
+}
+
+.ui-slider {
+    padding: 0.9em 75px 0.9em 15px;
+    position: absolute;
+    right: 0;
+    width: 80% !important;
+    ;
+    border-radius: 0px;
+    height: 30px !important;
+    background: #000;
+    border-color: #000000 !important;
+    padding: 0px;
+}
+
+.myBoxClass {
+    position: absolute;
+    width: 70%;
+    top: 10px;
+    background-color: rgba(50, 50, 50, .9);
+}
+
+.myContainer {
+    display: flex;
+}
+
+.myCol {
+    flex: 1;
+}
