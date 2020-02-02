@@ -5,6 +5,22 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 import dataGetter
 
 
+import time
+import atexit
+
+from apscheduler.schedulers.background import BackgroundScheduler
+
+
+def print_date_time():
+    print(time.strftime("%A, %d. %B %Y %I:%M:%S %p"))
+
+
+#scheduler = BackgroundScheduler()
+#scheduler.add_job(func=dataGetter.getTemp, trigger="interval", seconds=3)
+#scheduler.start()
+# Shut down the scheduler when exiting the app
+#atexit.register(lambda: scheduler.shutdown())
+
 
 
 app_flask = Flask(__name__)
@@ -14,6 +30,16 @@ app_flask = Flask(__name__)
 def index():
     tempValues = dataGetter.getTemp()
     return render_template('index.html', temp = tempValues)
+
+
+
+@app_flask.route('/backgroundProcess')
+def backgroundProcess():
+    tempValues = dataGetter.getTemp()
+    return jsonify(tempValues)
+
+
+
 
 @app_flask.route('/research')
 def research():
@@ -41,17 +67,18 @@ def paper1_policy():
     return render_template('paper1_policy.html')
 
 # Post and request data:
-@app_flask.route('/blog/add/ajax', methods=['POST', 'GET'])
+@app_flask.route('/index/add/ajax', methods=['POST', 'GET'])
 def add_blog_ajax():
-    if request.method == 'POST':
-        lambdaP = request.json['lambdaP']
-        sigma = request.json['sigma']
-        print(sigma)
-        outDict = policyCalc.fun_retraction(sigma = sigma, lambdaP = lambdaP)
-        #print(outDict['eps12_retraction'],outDict['vfun_F12_retraction'])
-        #outDict = policyCalc.fun_permanet(sigma = sigma, lambdaP = lambdaP)
-        #print(outDict['Pt'])
-        return jsonify(outDict)
+    #lambdaP = request.json['lambdaP']
+    #sigma = request.json['sigma']
+    #print(sigma)
+    #outDict = policyCalc.fun_retraction(sigma = sigma, lambdaP = lambdaP)
+    #print(outDict['eps12_retraction'],outDict['vfun_F12_retraction'])
+    #outDict = policyCalc.fun_permanet(sigma = sigma, lambdaP = lambdaP)
+    #print(outDict['Pt'])
+    return jsonify({"data":23})
+
+
 
 
 
