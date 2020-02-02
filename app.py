@@ -33,14 +33,6 @@ def index():
 
 
 
-@app_flask.route('/backgroundProcess')
-def backgroundProcess():
-    tempValues = dataGetter.getTemp()
-    return jsonify(tempValues)
-
-
-
-
 @app_flask.route('/research')
 def research():
     return render_template('research.html')
@@ -69,14 +61,7 @@ def paper1_policy():
 # Post and request data:
 @app_flask.route('/index/add/ajax', methods=['POST', 'GET'])
 def add_blog_ajax():
-    #lambdaP = request.json['lambdaP']
-    #sigma = request.json['sigma']
-    #print(sigma)
-    #outDict = policyCalc.fun_retraction(sigma = sigma, lambdaP = lambdaP)
-    #print(outDict['eps12_retraction'],outDict['vfun_F12_retraction'])
-    #outDict = policyCalc.fun_permanet(sigma = sigma, lambdaP = lambdaP)
-    #print(outDict['Pt'])
-    return jsonify({"data":23})
+    return jsonify(dataGetter.getTemp())
 
 
 
