@@ -24,6 +24,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='custom.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <!--  <link href="{{ url_for('static', filename='font-awesome.min.css') }}" rel="stylesheet" type="text/css"> -->
@@ -38,11 +39,10 @@
     <link href="{{ url_for('static', filename='clean-blog.css') }}" rel="stylesheet">
 
 
-
-
 </head>
 
 <body>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -79,25 +79,38 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/background.jpg') }}');">
+    <header class="masthead"
+        style="background-image: url('{{ url_for('static', filename='img/background.jpg') }}'); max-height: 30vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <div style="padding-bottom: 5px;">
-                            <h1>Termperature</h1>
-                            <p class="subheading" id="temp1">Inside: {{temp[0]}}&#176 C</p>
-                            <p class="subheading" id="temp2">Outside: {{temp[1]}}&#176 C</p>
-                        </div>
-
+                    <div style="padding-top: 10vh; text-align: center; color: antiquewhite; padding-bottom: 5vh;">
+                        <h2 class="subheading" id="temp1">Inside: {{temp[0]}}&#176 C</h2>
+                        <h2 class="subheading" id="temp2">Outside: {{temp[1]}}&#176 C</h2>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="center-block w-100"
+                    src="{{ url_for('static', filename='img/carousel/20200102_122026.jpg') }}" alt="First slide">
+            </div>
+            {%for i in imgList%}
+            <div class="carousel-item">
+                <img class="center-block w-100 " src={{i}} alt="Third slide">
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
@@ -105,7 +118,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
@@ -114,9 +127,16 @@
     <script src="{{ url_for('static', filename='autoRefresh.js') }}"></script>
 
     <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+
     <!-- Custom scripts for this template -->
     <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
 
+
+
+
 </body>
+
+
+
 
 </html>

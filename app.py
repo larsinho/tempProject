@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import dataGetter
-
+import os
 
 import time
 import atexit
@@ -28,8 +28,14 @@ app_flask = Flask(__name__)
 
 @app_flask.route('/')
 def index():
+    # Creates a directory list for bootstrap
+    allninjas = []
+    for filename in os.listdir('static/img/carousel'):
+        if filename.endswith(".jpg"):
+            allninjas.append(os.path.join('static/img/carousel', filename))
+    # Gets temperature data:    
     tempValues = dataGetter.getTemp()
-    return render_template('index.html', temp = tempValues)
+    return render_template('index.html', temp = tempValues, imgList = allninjas)
 
 
 
