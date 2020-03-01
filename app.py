@@ -30,7 +30,7 @@ app_flask = Flask(__name__)
 def index():
     # Creates a directory list for bootstrap
     allninjas = []
-    for filename in os.listdir('static/img/carousel'):
+    for filename in os.listdir('/home/pi/tempProject/static/img/carousel'):
         if filename.endswith(".jpg"):
             allninjas.append(os.path.join('static/img/carousel', filename))
     # Gets temperature data:    
